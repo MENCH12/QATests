@@ -34,3 +34,39 @@ D:\School\Classes\WINTER 2023\QA\Assignments\SeleniumGroupProject\obj\Debug\Sele
 D:\School\Classes\WINTER 2023\QA\Assignments\SeleniumGroupProject\obj\Debug\SeleniumGroupProject.csproj.CopyComplete
 D:\School\Classes\WINTER 2023\QA\Assignments\SeleniumGroupProject\obj\Debug\SeleniumGroupProject.exe
 D:\School\Classes\WINTER 2023\QA\Assignments\SeleniumGroupProject\obj\Debug\SeleniumGroupProject.pdb
+C:\repos\QATests\bin\Debug\selenium-manager\linux\selenium-manager
+C:\repos\QATests\bin\Debug\selenium-manager\macos\selenium-manager
+C:\repos\QATests\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\repos\QATests\bin\Debug\SeleniumGroupProject.exe.config
+C:\repos\QATests\bin\Debug\SeleniumGroupProject.exe
+C:\repos\QATests\bin\Debug\SeleniumGroupProject.pdb
+C:\repos\QATests\bin\Debug\Bogus.dll
+C:\repos\QATests\bin\Debug\BouncyCastle.Crypto.dll
+C:\repos\QATests\bin\Debug\Google.Protobuf.dll
+C:\repos\QATests\bin\Debug\K4os.Compression.LZ4.dll
+C:\repos\QATests\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\repos\QATests\bin\Debug\K4os.Hash.xxHash.dll
+C:\repos\QATests\bin\Debug\MySql.Data.dll
+C:\repos\QATests\bin\Debug\System.Buffers.dll
+C:\repos\QATests\bin\Debug\System.Memory.dll
+C:\repos\QATests\bin\Debug\System.Numerics.Vectors.dll
+C:\repos\QATests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\repos\QATests\bin\Debug\WebDriver.dll
+C:\repos\QATests\bin\Debug\Bogus.xml
+C:\repos\QATests\bin\Debug\BouncyCastle.Crypto.xml
+C:\repos\QATests\bin\Debug\Google.Protobuf.pdb
+C:\repos\QATests\bin\Debug\Google.Protobuf.xml
+C:\repos\QATests\bin\Debug\K4os.Compression.LZ4.xml
+C:\repos\QATests\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\repos\QATests\bin\Debug\K4os.Hash.xxHash.xml
+C:\repos\QATests\bin\Debug\MySql.Data.xml
+C:\repos\QATests\bin\Debug\System.Buffers.xml
+C:\repos\QATests\bin\Debug\System.Memory.xml
+C:\repos\QATests\bin\Debug\System.Numerics.Vectors.xml
+C:\repos\QATests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.AssemblyReference.cache
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.SuggestedBindingRedirects.cache
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.CoreCompileInputs.cache
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.CopyComplete
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.exe
+C:\repos\QATests\obj\Debug\SeleniumGroupProject.pdb
