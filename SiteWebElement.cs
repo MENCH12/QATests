@@ -249,6 +249,13 @@ namespace SeleniumGit2023
             return txtLocation;
         }
 
+        // Account Creation Success Message
+        public static IWebElement accountSucc(IWebDriver driver)
+        {
+            IWebElement accountSucc = driver.FindElement(By.ClassName("lead"));
+            return accountSucc;
+        }
+
         // Text field for Province Selector
         public static IWebElement txtProvince(IWebDriver driver)
         {

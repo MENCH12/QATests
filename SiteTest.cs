@@ -522,6 +522,41 @@ namespace SeleniumGit2023
             }
         }
 
+        // Does the form submit when populated with valid info?
+        public static bool FormSubmitTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexamplexX", "1234567", "1234567", "111-2222-3456",
+                    "111 example St.",  "E3A 0A1", "example");
+
+                // Get the success message Web Element
+                IWebElement accountSucc = SiteWebElement.accountSucc(driver);
+
+                // Get the text from the success message Web Element
+                String strSuccess = accountSucc.Text;
+
+                // Test if the text contains what we expect on as successful sign up
+                if (strSuccess.Contains("Your account has been created!"))
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
         // ********************************************************************************** 
         // ********************************* PAGE DRIVERS *********************************** 
         // ********************************************************************************** 
@@ -569,6 +604,42 @@ namespace SeleniumGit2023
 
         }
 
+        public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail, string strSname,
+           string strPassword, string strCpassword, string strPnum, string strAddress, string strPcode, string strDescript)
+        {
+            // Get elements for the page
+            driver.Url = "http://10.157.123.12/site4/signup.php";
+
+            IWebElement btnRegister = SiteWebElement.btnRegister(driver);
+            IWebElement txtFirstName = SiteWebElement.txtFirstName(driver);
+            IWebElement txtLastName = SiteWebElement.txtLastName(driver);
+            IWebElement txtEmail = SiteWebElement.txtEmail(driver);
+            IWebElement txtSname = SiteWebElement.txtSname(driver);
+            IWebElement txtPassword = SiteWebElement.txtPassword(driver);
+            IWebElement txtCpassword = SiteWebElement.txtCpassword(driver);
+            IWebElement txtPnum = SiteWebElement.txtPnum(driver);
+            IWebElement txtAddress = SiteWebElement.txtAddress(driver);
+            IWebElement txtPcode = SiteWebElement.txtPcode(driver);
+            IWebElement txtDescript = SiteWebElement.txtDescript(driver);
+
+            txtFirstName.SendKeys(strFirstName);
+            txtLastName.SendKeys(strLastName);
+            txtEmail.SendKeys(strEmail);
+            txtSname.SendKeys(strSname);
+            txtPassword.SendKeys(strPassword);
+            txtCpassword.SendKeys(strCpassword);
+            txtPnum.SendKeys(strPnum);
+            txtAddress.SendKeys(strAddress);
+            txtPcode.SendKeys(strPcode);
+            txtDescript.SendKeys(strDescript);
+
+            if (btnRegisterBool)
+            {
+                btnRegister.Click();
+            }
+        }
+
+        //
         public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail)
         {
             // Get elements for the page
