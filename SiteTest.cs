@@ -557,6 +557,41 @@ namespace SeleniumGit2023
             }
         }
 
+        // Does the form submit with passwords that don't match?
+        public static bool CpasswordTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexamplexX", "1234567", "1234568", "111-2222-3456",
+                    "111 example St.", "E3A 0A1", "example");
+
+                // Get the success message Web Element
+                IWebElement accountSucc = SiteWebElement.accountSucc(driver);
+
+                // Get the text from the success message Web Element
+                String strSuccess = accountSucc.Text;
+
+                // Test if the text contains what we expect on as successful sign up
+                if (strSuccess.Contains("Your account has been created!"))
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
         // ********************************************************************************** 
         // ********************************* PAGE DRIVERS *********************************** 
         // ********************************************************************************** 
