@@ -5,9 +5,12 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using Bogus.DataSets;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools.V109.Profiler;
 using OpenQA.Selenium.Interactions;
+
 
 namespace SeleniumGit2023
 {
@@ -528,17 +531,13 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexamplexX", "1234567", "1234567", "111-2222-3456",
-                    "111 example St.",  "E3A 0A1", "example");
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", "1234567", "1234567", "111-222-3456",
+                    "111 example St.", "New Brunswick",  "E3A 0A1", "example");
 
-                // Get the success message Web Element
-                IWebElement accountSucc = SiteWebElement.accountSucc(driver);
+                string currentUrl = driver.Url;
 
-                // Get the text from the success message Web Element
-                String strSuccess = accountSucc.Text;
-
-                // Test if the text contains what we expect on as successful sign up
-                if (strSuccess.Contains("Your account has been created!"))
+                // Compare the current URL with the expected URL
+                if (currentUrl == "http://10.157.123.12/site4/Login.php?success=True")
                 {
                     // Test was successful
                     return true;
@@ -563,25 +562,22 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexamplexX", "1234567", "1234568", "111-2222-3456",
-                    "111 example St.", "E3A 0A1", "example");
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "Xxexamplex" +
+                    "X", "1234567", "1234568", "111-222-3456",
+                    "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
-                // Get the success message Web Element
-                IWebElement accountSucc = SiteWebElement.accountSucc(driver);
+                string currentUrl = driver.Url;
 
-                // Get the text from the success message Web Element
-                String strSuccess = accountSucc.Text;
-
-                // Test if the text contains what we expect on as successful sign up
-                if (strSuccess.Contains("Your account has been created!"))
+                // Compare the current URL with the expected URL
+                if (currentUrl == "http://10.157.123.12/site4/Login.php?success=True")
                 {
-                    // Test was successful
-                    return true;
+                    // Test was unsuccessful
+                    return false;
                 }
                 else
                 {
                     // Test was NOT successful
-                    return false;
+                    return true;
                 }
 
             }
@@ -640,8 +636,11 @@ namespace SeleniumGit2023
         }
 
         public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail, string strSname,
-           string strPassword, string strCpassword, string strPnum, string strAddress, string strPcode, string strDescript)
+           string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
         {
+            //Precise Datetime Variable to create unique usernames
+            string d = DateTime.Now.ToString();
+
             // Get elements for the page
             driver.Url = "http://10.157.123.12/site4/signup.php";
 
@@ -654,17 +653,19 @@ namespace SeleniumGit2023
             IWebElement txtCpassword = SiteWebElement.txtCpassword(driver);
             IWebElement txtPnum = SiteWebElement.txtPnum(driver);
             IWebElement txtAddress = SiteWebElement.txtAddress(driver);
+            IWebElement Province = SiteWebElement.txtProvince(driver);
             IWebElement txtPcode = SiteWebElement.txtPcode(driver);
             IWebElement txtDescript = SiteWebElement.txtDescript(driver);
 
             txtFirstName.SendKeys(strFirstName);
             txtLastName.SendKeys(strLastName);
             txtEmail.SendKeys(strEmail);
-            txtSname.SendKeys(strSname);
+            txtSname.SendKeys(strSname + d);
             txtPassword.SendKeys(strPassword);
             txtCpassword.SendKeys(strCpassword);
             txtPnum.SendKeys(strPnum);
             txtAddress.SendKeys(strAddress);
+            Province.SendKeys(strProv + Keys.Enter);
             txtPcode.SendKeys(strPcode);
             txtDescript.SendKeys(strDescript);
 

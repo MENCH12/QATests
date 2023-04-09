@@ -38,6 +38,8 @@ namespace SeleniumGit2023
             string badEmailAddressTestResult = "";
             string emailOver100CharsTestResult = "";
             string emailAcceptableTestResult = "";
+            string formSubmitTestResult = "";
+            string cpasswordTestResult = "";
 
             // Create the Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");
@@ -319,6 +321,44 @@ namespace SeleniumGit2023
                 emailAcceptableTestResult = "FAIL";
             }
 
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 16th test *
+            // ******************************************************************************************************
+
+            bool FormSubmitTest = SiteTest.FormSubmitTest(driver);
+
+            // Display the results of the test
+            if (FormSubmitTest)
+            {
+                Console.WriteLine("FormSubmitTest - Sign In Success: Passed!");
+                formSubmitTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("FormSubmitTest - Sign In Success: Failed...");
+                formSubmitTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 17th test *
+            // ******************************************************************************************************
+
+            bool CpasswordTest = SiteTest.CpasswordTest(driver);
+
+            // Display the results of the test
+            if (CpasswordTest)
+            {
+                Console.WriteLine("CpasswordTest - Sign In Success: Passed!");
+                cpasswordTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("CpasswordTest - Sign In Success: Failed...");
+                cpasswordTestResult = "FAIL";
+            }
+
+
+
             // ********************************************************************************** 
             // ************************************* OUTPUT ************************************* 
             // ********************************************************************************** 
@@ -348,6 +388,8 @@ namespace SeleniumGit2023
             Console.WriteLine("\t13.\tBad Email Address Test \t\t= " + badEmailAddressTestResult);
             Console.WriteLine("\t14.\tEmail Over 100 Chars Test \t= " + emailOver100CharsTestResult);
             Console.WriteLine("\t15.\tEmail Acceptable Test \t\t= " + emailAcceptableTestResult);
+            Console.WriteLine("\t16.\tForm Submit Test \t\t= " + formSubmitTestResult);
+            Console.WriteLine("\t17.\tDifferent Password Test \t\t= " + cpasswordTestResult);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\tPress ENTER to quit...");
