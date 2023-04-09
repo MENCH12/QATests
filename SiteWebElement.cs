@@ -130,12 +130,132 @@ namespace SeleniumGit2023
             return txtEmail;
         }
 
-        // Span tag to display last name errors
+        // Span tag to display email errors
         public static IWebElement txtEmailError(IWebDriver driver)
         {
             IWebElement txtEmailError = driver.FindElement(By.Id("emailError"));
             return txtEmailError;
         }
+
+        // Text field for Screen Name
+        public static IWebElement txtSname(IWebDriver driver)
+        {
+            IWebElement txtSname = driver.FindElement(By.Id("username"));
+            return txtSname;
+        }
+
+        // Span tag to display Screen Name errors
+        public static IWebElement txtSnameError(IWebDriver driver)
+        {
+            IWebElement txtSnameError = driver.FindElement(By.Id("usernameError"));
+            return txtSnameError;
+        }
+
+        // Text field for Password
+        public static IWebElement txtPassword(IWebDriver driver)
+        {
+            IWebElement txtPassword = driver.FindElement(By.Id("password"));
+            return txtPassword;
+        }
+
+        // Span tag to display Password errors
+        public static IWebElement txtPasswordError(IWebDriver driver)
+        {
+            IWebElement txtPasswordError = driver.FindElement(By.Id("passwordError"));
+            return txtPasswordError;
+        }
+
+        // Text field for Confirm Password
+        public static IWebElement txtCpassword(IWebDriver driver)
+        {
+            IWebElement txtCpassword = driver.FindElement(By.Id("confirm"));
+            return txtCpassword;
+        }
+
+        // Span tag to display Confirm Password errors
+        public static IWebElement txtCpasswordError(IWebDriver driver)
+        {
+            IWebElement txtCpasswordError = driver.FindElement(By.Id("confirmError"));
+            return txtCpasswordError;
+        }
+
+        // Text field for Phone Number
+        public static IWebElement txtPnum(IWebDriver driver)
+        {
+            IWebElement txtPnum = driver.FindElement(By.Id("phone"));
+            return txtPnum;
+        }
+
+        // Span tag to display Phone Number errors
+        public static IWebElement txtPnumError(IWebDriver driver)
+        {
+            IWebElement txtPnumError = driver.FindElement(By.Id("phoneError"));
+            return txtPnumError;
+        }
+
+        // Text field for Address
+        public static IWebElement txtAddress(IWebDriver driver)
+        {
+            IWebElement txtAddress = driver.FindElement(By.Id("address"));
+            return txtAddress;
+        }
+
+        // Span tag to display Address errors
+        public static IWebElement txtAddressError(IWebDriver driver)
+        {
+            IWebElement txtAddressError = driver.FindElement(By.Id("addressError"));
+            return txtAddressError;
+        }
+
+        // Text field for Postal Code
+        public static IWebElement txtPcode(IWebDriver driver)
+        {
+            IWebElement txtPcode = driver.FindElement(By.Id("postalCode"));
+            return txtPcode;
+        }
+
+        // Span tag to display Postal Code errors
+        public static IWebElement txtPcodeError(IWebDriver driver)
+        {
+            IWebElement txtPcodeError = driver.FindElement(By.Id("postalCodeError"));
+            return txtPcodeError;
+        }
+
+        // Text field for URL
+        public static IWebElement txtURL(IWebDriver driver)
+        {
+            IWebElement txtURL = driver.FindElement(By.Id("url"));
+            return txtURL;
+        }
+
+        // Text field for Description
+        public static IWebElement txtDescript(IWebDriver driver)
+        {
+            IWebElement txtDescript = driver.FindElement(By.Id("desc"));
+            return txtDescript;
+        }
+
+        // Span tag to display Description errors
+        public static IWebElement txtDescError(IWebDriver driver)
+        {
+            IWebElement txtDescError = driver.FindElement(By.Id("descError"));
+            return txtDescError;
+        }
+
+        // Text field for Location
+        public static IWebElement txtLocation(IWebDriver driver)
+        {
+            IWebElement txtLocation = driver.FindElement(By.Id("location"));
+            return txtLocation;
+        }
+
+        // Text field for Province Selector
+        public static IWebElement txtProvince(IWebDriver driver)
+        {
+            IWebElement txtProvince = driver.FindElement(By.Id("province"));
+            return txtProvince;
+        }
+
         // Register button
         public static IWebElement btnRegister(IWebDriver driver)
         {
