@@ -40,6 +40,15 @@ namespace SeleniumGit2023
             string emailAcceptableTestResult = "";
             string formSubmitTestResult = "";
             string cpasswordTestResult = "";
+            string blankPasswordTestResult = "";
+            string blankPasswordConfirmTestResult = "";
+            string blankScreenNameTestResult = "";
+            string PostalCodeTestResult = "";
+            string blankPostalCodeTestResult = "";
+            string PhoneNumberTestResult = "";
+            string blankPhoneNumberTestResult = "";
+            string AddressTestResult = "";
+            string blankAddressTestResult = "";
 
             // Create the Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");
@@ -357,8 +366,167 @@ namespace SeleniumGit2023
                 cpasswordTestResult = "FAIL";
             }
 
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 18th test *
+            // ******************************************************************************************************
 
+            bool BlankPasswordTest = SiteTest.BlankPwordTest(driver);
 
+            // Display the results of the test
+            if (BlankPasswordTest)
+            {
+                Console.WriteLine("BlankPasswordTest - Sign In Success: Passed!");
+                blankPasswordTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("BlankPasswordTest - Sign In Success: Failed...");
+                blankPasswordTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 19th test *
+            // ******************************************************************************************************
+
+            bool BlankPasswordConfirmTest = SiteTest.noPasswordTest(driver);
+
+            // Display the results of the test
+            if (BlankPasswordConfirmTest)
+            {
+                Console.WriteLine("BlankPasswordConfirmTest - Sign In Success: Passed!");
+                blankPasswordConfirmTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("BlankPasswordConfirmTest - Sign In Success: Failed...");
+                blankPasswordConfirmTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 20th test *
+            // ******************************************************************************************************
+
+            bool BlankScreenNameTest = SiteTest.noScreenNameTest(driver);
+
+            // Display the results of the test
+            if (BlankScreenNameTest)
+            {
+                Console.WriteLine("noScreenNameTest - Sign In Success: Passed!");
+                blankScreenNameTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("noScreenNameTest - Sign In Success: Failed...");
+                blankScreenNameTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 21st test *
+            // ******************************************************************************************************
+
+            bool PostalCodeTest = SiteTest.PostalCodeAreaTest(driver);
+
+            // Display the results of the test
+            if (PostalCodeTest)
+            {
+                Console.WriteLine("PostalCodeTest - Sign In Success: Passed!");
+                PostalCodeTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("PostalCodeTest - Sign In Success: Failed...");
+                PostalCodeTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 22nd test *
+            // ******************************************************************************************************
+
+            bool BlankPostalCodeTest = SiteTest.NoPostalCodeTest(driver);
+
+            // Display the results of the test
+            if (BlankPostalCodeTest)
+            {
+                Console.WriteLine("blankPostalCodeTest - Sign In Success: Passed!");
+                blankPostalCodeTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("blankPostalCodeTest - Sign In Success: Failed...");
+                blankPostalCodeTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 23rd test *
+            // ******************************************************************************************************
+
+            bool PhoneNumberTest = SiteTest.PhoneNumberTest(driver);
+
+            // Display the results of the test
+            if (PhoneNumberTest)
+            {
+                Console.WriteLine("PhoneNumberTest - Sign In Success: Passed!");
+                PhoneNumberTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("PhoneNumberTest - Sign In Success: Failed...");
+                PhoneNumberTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 24th test *
+            // ******************************************************************************************************
+
+            bool BlankPhoneNumberTest = SiteTest.noPhoneNumberTest(driver);
+
+            // Display the results of the test
+            if (BlankPhoneNumberTest)
+            {
+                Console.WriteLine("blankPhoneNumberTest - Sign In Success: Passed!");
+                blankPhoneNumberTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("blankPhoneNumberTest - Sign In Success: Failed...");
+                blankPhoneNumberTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 25th test *
+            // ******************************************************************************************************
+
+            bool AddressTest = SiteTest.AddressTest(driver);
+
+            // Display the results of the test
+            if (AddressTest)
+            {
+                Console.WriteLine("AddressTest - Sign In Success: Passed!");
+                AddressTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("AddressTest - Sign In Success: Failed...");
+                AddressTestResult = "FAIL";
+            }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 26th test *
+            // ******************************************************************************************************
+
+            bool blankAddressTest = SiteTest.noAddressTest(driver);
+
+            // Display the results of the test
+            if (blankAddressTest)
+            {
+                Console.WriteLine("blankAddressTest - Sign In Success: Passed!");
+                blankAddressTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("blankAddressTest - Sign In Success: Failed...");
+                blankAddressTestResult = "FAIL";
+            }
             // ********************************************************************************** 
             // ************************************* OUTPUT ************************************* 
             // ********************************************************************************** 
@@ -390,6 +558,16 @@ namespace SeleniumGit2023
             Console.WriteLine("\t15.\tEmail Acceptable Test \t\t= " + emailAcceptableTestResult);
             Console.WriteLine("\t16.\tForm Submit Test \t\t= " + formSubmitTestResult);
             Console.WriteLine("\t17.\tDifferent Password Test \t\t= " + cpasswordTestResult);
+            Console.WriteLine("\t18.\tBlank Password Test \t\t= " + blankPasswordTestResult);
+            Console.WriteLine("\t19.\tBlank Password Confirm Test \t\t= " + blankPasswordConfirmTestResult);
+            Console.WriteLine("\t20.\tBlank ScreenName Test \t\t= " + blankScreenNameTestResult);
+            Console.WriteLine("\t21.\tPostal Code Test \t\t= " + PostalCodeTestResult);
+            Console.WriteLine("\t22.\tBlank Postal Code Test \t\t= " + blankPostalCodeTestResult);
+            Console.WriteLine("\t23.\tPhone Number Test \t\t= " + PhoneNumberTestResult);
+            Console.WriteLine("\t24.\tBlank Phone Number Test \t\t= " + blankPhoneNumberTestResult);
+            Console.WriteLine("\t25.\tAddress Test \t\t= " + AddressTestResult);
+            Console.WriteLine("\t24.\tBlank Address Test \t\t= " + blankAddressTestResult);
+
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\tPress ENTER to quit...");
