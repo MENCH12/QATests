@@ -273,6 +273,18 @@ namespace SeleniumGit2023
             return lnkLogout;
         }
 
+        public static IWebElement txtTweet(IWebDriver driver)
+        {
+            IWebElement txtTweet = driver.FindElement(By.Id("myTweet"));
+            return txtTweet;
+        }
+
+        public static IWebElement btnSend(IWebDriver driver)
+        {
+            IWebElement btnSend = driver.FindElement(By.Id("button"));
+            return btnSend;
+        }
+
         public static IWebElement imgTrumpHead(IWebDriver driver)
         {
             IWebElement imgTrumpHead = driver.FindElement(By.CssSelector("img.bannericons[src='images/profilepics/default.jfif']"));

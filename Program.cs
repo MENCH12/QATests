@@ -50,6 +50,7 @@ namespace SeleniumGit2023
             string AddressTestResult = "";
             string blankAddressTestResult = "";
             string sNameSCTestResult = "";
+            string tweetTestResult = "";
 
             // Create the Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");
@@ -546,6 +547,27 @@ namespace SeleniumGit2023
                 Console.WriteLine("sNameSCTest - Sign In Success: Failed...");
                 sNameSCTestResult = "FAIL";
             }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 28th test *
+            // ******************************************************************************************************
+
+            bool tweetTest = SiteTest.tweetTest(driver);
+
+            // Display the results of the test
+            if (tweetTest)
+            {
+                Console.WriteLine("tweetTest - Sign In Success: Passed!");
+                tweetTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("tweetTest - Sign In Success: Failed...");
+                tweetTestResult = "FAIL";
+            }
+
+
+
             // ********************************************************************************** 
             // ************************************* OUTPUT ************************************* 
             // ********************************************************************************** 
@@ -587,6 +609,7 @@ namespace SeleniumGit2023
             Console.WriteLine("\t25.\tAddress Test \t\t\t= " + AddressTestResult);
             Console.WriteLine("\t26.\tBlank Address Test \t\t\t\t= " + blankAddressTestResult);
             Console.WriteLine("\t27.\tScreenName Special Characters Test \t= " + sNameSCTestResult);
+            Console.WriteLine("\t28.\tSend Tweet Test \t= " + tweetTestResult);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\tPress ENTER to quit...");

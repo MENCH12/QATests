@@ -12,6 +12,7 @@ using OpenQA.Selenium.DevTools.V109.Profiler;
 using OpenQA.Selenium.Interactions;
 
 
+
 namespace SeleniumGit2023
 {
     class SiteTest
@@ -129,6 +130,35 @@ namespace SeleniumGit2023
 
             // Compare the current URL with the expected URL
             if (currentUrl == "http://10.157.123.12/site4/index.php")
+            {
+                // Test was successful
+                return true;
+            }
+            else
+            {
+                // Test was NOT successful
+                return false;
+            }
+        }
+
+        // ********************************************************************************************************
+        // ********************************************************************************** INDEX page tests
+        // ********************************************************************************************************
+
+        // Tweet Functionality test
+        // Unsure about this one, The page sends tweets fine, but you need to click send twice.
+        // could be a bug or a confirmation feature.
+        public static bool tweetTest(IWebDriver driver)
+        {
+            indexPage(driver, true, "asdf");
+
+            driver.SwitchTo().Alert().Accept();
+
+            // Get the current URL of the browser window
+            string currentUrl = driver.Url;
+
+            // Compare the current URL with the expected URL
+            if (currentUrl == "http://10.157.123.12/site4/index.php?message=Tweet%20sent!")
             {
                 // Test was successful
                 return true;
@@ -1057,6 +1087,30 @@ namespace SeleniumGit2023
             {
                 btnRegister.Click();
             }
+        }
+
+        public static void indexPage(IWebDriver driver, bool btnSendBool, string myTweet)
+        {
+            //login
+            LoginPage(driver, false, false, "Test", "asdf", true);
+
+           
+            //Get Page Elements
+            IWebElement txtTweet = SiteWebElement.txtTweet(driver);
+            IWebElement btnSend = SiteWebElement.btnSend(driver);
+
+            //Send Input
+            txtTweet.Click();
+            txtTweet.SendKeys(myTweet);
+
+            //Click Send twice if specified in call
+            if (btnSendBool)
+            {
+                btnSend.Click();
+                btnSend.Click();
+            }
+
+            
         }
 
         public static void Logout(IWebDriver driver, bool lnkLogoutBool)
