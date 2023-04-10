@@ -877,7 +877,37 @@ namespace SeleniumGit2023
             }
         }
 
+        //Does the form submit with special characters in the Screen Name?
+        public static bool sNameSCTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "!@#$%^&*()",
+                    "1234567", "", "111-222-3456",
+                    "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
 
 
 
