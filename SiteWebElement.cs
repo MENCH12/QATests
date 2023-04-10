@@ -249,7 +249,6 @@ namespace SeleniumGit2023
             return txtLocation;
         }
 
-
         // Text field for Province Selector
         public static IWebElement txtProvince(IWebDriver driver)
         {

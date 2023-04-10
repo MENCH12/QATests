@@ -531,7 +531,8 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", "1234567", "1234567", "111-222-3456",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", 
+                    "1234567", "1234567", "111-222-3456",
                     "111 example St.", "New Brunswick",  "E3A 0A1", "example");
 
                 string currentUrl = driver.Url;
@@ -562,22 +563,22 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "Xxexamplex" +
-                    "X", "1234567", "1234568", "111-222-3456",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", 
+                    "1234567", "1234568", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
                 string currentUrl = driver.Url;
 
                 // Compare the current URL with the expected URL
-                if (currentUrl == "http://10.157.123.12/site4/Login.php?success=True")
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
                 {
-                    // Test was unsuccessful
-                    return false;
+                    // Test was successful
+                    return true;
                 }
                 else
                 {
                     // Test was NOT successful
-                    return true;
+                    return false;
                 }
 
             }
@@ -587,6 +588,299 @@ namespace SeleniumGit2023
                 return false;
             }
         }
+
+        // Does the form submit when the password field is left blank?
+        public static bool BlankPwordTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                    "", "1234567", "111-222-3456",
+                    "111 example St.", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+        // Does the form submit with no password Confirm?
+        public static bool noPasswordTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                    "1234567", "", "111-222-3456",
+                    "111 example St.", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with no Screen Name?
+        public static bool noScreenNameTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com",
+                    "1234567", "1234567", "111-222-3456",
+                    "111 example St.", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with impossible Postal Codes?
+        // Postal Codes in New Brunswick must start with E.
+        public static bool PostalCodeAreaTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "111-222-3456",
+                     "111 example St.", "New Brunswick", "S3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with no postal code?
+        public static bool NoPostalCodeTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "111-222-3456",
+                     "111 example St.", "New Brunswick", "", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with an invalid Phone Number?
+        public static bool PhoneNumberTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "111-2222-3456",
+                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with no Phone Number?
+        public static bool noPhoneNumberTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "",
+                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with an invalid Address?
+        public static bool AddressTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "111-222-3456",
+                     "QR.F", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+        // Does the form submit with no Address?
+        public static bool noAddressTest(IWebDriver driver)
+        {
+            try
+            {
+                // Enter the following information into the sign up page an submit them
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                     "1234567", "1234567", "111-222-3456",
+                     "", "New Brunswick", "E3A 0A1", "example");
+
+                string currentUrl = driver.Url;
+
+                // Compare the current URL with the expected URL
+                if (currentUrl != "http://10.157.123.12/site4/Login.php?success=True")
+                {
+                    // Test was successful
+                    return true;
+                }
+                else
+                {
+                    // Test was NOT successful
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Test was not successful. Crashed somewhere
+                return false;
+            }
+        }
+
+
+
+
+
 
         // ********************************************************************************** 
         // ********************************* PAGE DRIVERS *********************************** 
@@ -638,7 +932,7 @@ namespace SeleniumGit2023
         public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail, string strSname,
            string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
         {
-            //Precise Datetime Variable to create unique usernames
+            //Assigns precise current time to variable, useful for creating unique usernames
             string d = DateTime.Now.ToString();
 
             // Get elements for the page
@@ -661,6 +955,45 @@ namespace SeleniumGit2023
             txtLastName.SendKeys(strLastName);
             txtEmail.SendKeys(strEmail);
             txtSname.SendKeys(strSname + d);
+            txtPassword.SendKeys(strPassword);
+            txtCpassword.SendKeys(strCpassword);
+            txtPnum.SendKeys(strPnum);
+            txtAddress.SendKeys(strAddress);
+            Province.SendKeys(strProv + Keys.Enter);
+            txtPcode.SendKeys(strPcode);
+            txtDescript.SendKeys(strDescript);
+
+            if (btnRegisterBool)
+            {
+                btnRegister.Click();
+            }
+        }
+
+        public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail,
+          string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
+        {
+            
+
+            // Get elements for the page
+            driver.Url = "http://10.157.123.12/site4/signup.php";
+
+            IWebElement btnRegister = SiteWebElement.btnRegister(driver);
+            IWebElement txtFirstName = SiteWebElement.txtFirstName(driver);
+            IWebElement txtLastName = SiteWebElement.txtLastName(driver);
+            IWebElement txtEmail = SiteWebElement.txtEmail(driver);
+          
+            IWebElement txtPassword = SiteWebElement.txtPassword(driver);
+            IWebElement txtCpassword = SiteWebElement.txtCpassword(driver);
+            IWebElement txtPnum = SiteWebElement.txtPnum(driver);
+            IWebElement txtAddress = SiteWebElement.txtAddress(driver);
+            IWebElement Province = SiteWebElement.txtProvince(driver);
+            IWebElement txtPcode = SiteWebElement.txtPcode(driver);
+            IWebElement txtDescript = SiteWebElement.txtDescript(driver);
+
+            txtFirstName.SendKeys(strFirstName);
+            txtLastName.SendKeys(strLastName);
+            txtEmail.SendKeys(strEmail);
+         
             txtPassword.SendKeys(strPassword);
             txtCpassword.SendKeys(strCpassword);
             txtPnum.SendKeys(strPnum);
