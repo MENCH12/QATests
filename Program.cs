@@ -566,7 +566,7 @@ namespace SeleniumGit2023
             Console.WriteLine("\t23.\tPhone Number Test \t\t= " + PhoneNumberTestResult);
             Console.WriteLine("\t24.\tBlank Phone Number Test \t\t= " + blankPhoneNumberTestResult);
             Console.WriteLine("\t25.\tAddress Test \t\t= " + AddressTestResult);
-            Console.WriteLine("\t24.\tBlank Address Test \t\t= " + blankAddressTestResult);
+            Console.WriteLine("\t26.\tBlank Address Test \t\t= " + blankAddressTestResult);
 
             Console.WriteLine();
             Console.WriteLine();
