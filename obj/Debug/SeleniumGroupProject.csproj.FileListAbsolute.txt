@@ -70,3 +70,39 @@ C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.CoreCompileInputs.cache
 C:\repos\QATests\obj\Debug\SeleniumGroupProject.csproj.CopyComplete
 C:\repos\QATests\obj\Debug\SeleniumGroupProject.exe
 C:\repos\QATests\obj\Debug\SeleniumGroupProject.pdb
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\selenium-manager\linux\selenium-manager
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\selenium-manager\macos\selenium-manager
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\selenium-manager\windows\selenium-manager.exe
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\SeleniumGroupProject.exe.config
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\SeleniumGroupProject.exe
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\SeleniumGroupProject.pdb
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\Bogus.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\BouncyCastle.Crypto.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\Google.Protobuf.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Compression.LZ4.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Hash.xxHash.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\MySql.Data.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Buffers.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Memory.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Numerics.Vectors.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\WebDriver.dll
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\Bogus.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\BouncyCastle.Crypto.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\Google.Protobuf.pdb
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\Google.Protobuf.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Compression.LZ4.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\K4os.Hash.xxHash.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\MySql.Data.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Buffers.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Memory.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Numerics.Vectors.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.csproj.AssemblyReference.cache
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.csproj.SuggestedBindingRedirects.cache
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.csproj.CoreCompileInputs.cache
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.csproj.CopyComplete
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.exe
+D:\School\Classes\WINTER 2023\QA\Assignments\QATests\obj\Debug\SeleniumGroupProject.pdb
