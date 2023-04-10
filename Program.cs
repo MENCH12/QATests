@@ -49,6 +49,7 @@ namespace SeleniumGit2023
             string blankPhoneNumberTestResult = "";
             string AddressTestResult = "";
             string blankAddressTestResult = "";
+            string sNameSCTestResult = "";
 
             // Create the Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");
@@ -527,6 +528,24 @@ namespace SeleniumGit2023
                 Console.WriteLine("blankAddressTest - Sign In Success: Failed...");
                 blankAddressTestResult = "FAIL";
             }
+
+            // ******************************************************************************************************
+            // ********************************************************************************** Run the 27th test *
+            // ******************************************************************************************************
+
+            bool sNameSCTest = SiteTest.sNameSCTest(driver);
+
+            // Display the results of the test
+            if (sNameSCTest)
+            {
+                Console.WriteLine("sNameSCTest - Sign In Success: Passed!");
+                sNameSCTestResult = "PASS";
+            }
+            else
+            {
+                Console.WriteLine("sNameSCTest - Sign In Success: Failed...");
+                sNameSCTestResult = "FAIL";
+            }
             // ********************************************************************************** 
             // ************************************* OUTPUT ************************************* 
             // ********************************************************************************** 
@@ -567,7 +586,7 @@ namespace SeleniumGit2023
             Console.WriteLine("\t24.\tBlank Phone Number Test \t\t= " + blankPhoneNumberTestResult);
             Console.WriteLine("\t25.\tAddress Test \t\t= " + AddressTestResult);
             Console.WriteLine("\t26.\tBlank Address Test \t\t= " + blankAddressTestResult);
-
+            Console.WriteLine("\t26.\tScreenName Special Characters Test \t\t= " + sNameSCTestResult);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\tPress ENTER to quit...");
