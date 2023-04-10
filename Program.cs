@@ -606,10 +606,10 @@ namespace SeleniumGit2023
             Console.WriteLine("\t22.\tBlank Postal Code Test \t\t\t= " + blankPostalCodeTestResult);
             Console.WriteLine("\t23.\tPhone Number Test \t\t\t= " + PhoneNumberTestResult);
             Console.WriteLine("\t24.\tBlank Phone Number Test \t\t= " + blankPhoneNumberTestResult);
-            Console.WriteLine("\t25.\tAddress Test \t\t\t= " + AddressTestResult);
-            Console.WriteLine("\t26.\tBlank Address Test \t\t\t\t= " + blankAddressTestResult);
+            Console.WriteLine("\t25.\tAddress Test \t\t\t\t= " + AddressTestResult);
+            Console.WriteLine("\t26.\tBlank Address Test \t\t\t= " + blankAddressTestResult);
             Console.WriteLine("\t27.\tScreenName Special Characters Test \t= " + sNameSCTestResult);
-            Console.WriteLine("\t28.\tSend Tweet Test \t= " + tweetTestResult);
+            Console.WriteLine("\t28.\tSend Tweet Test \t\t\t= " + tweetTestResult);
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("\tPress ENTER to quit...");
