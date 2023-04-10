@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -561,7 +562,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", 
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com",  "Xxexamplex",
                     "1234567", "1234567", "111-222-3456",
                     "111 example St.", "New Brunswick",  "E3A 0A1", "example");
 
@@ -593,7 +594,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX", 
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com",  
                     "1234567", "1234568", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -625,7 +626,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                     "", "1234567", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -656,7 +657,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                     "1234567", "", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -688,7 +689,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", false,
                     "1234567", "1234567", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -721,7 +722,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "111-222-3456",
                      "111 example St.", "New Brunswick", "S3A 0A1", "example");
 
@@ -753,7 +754,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "111-222-3456",
                      "111 example St.", "New Brunswick", "", "example");
 
@@ -785,7 +786,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "111-2222-3456",
                      "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -817,7 +818,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "",
                      "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
@@ -849,7 +850,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "111-222-3456",
                      "QR.F", "New Brunswick", "E3A 0A1", "example");
 
@@ -881,7 +882,7 @@ namespace SeleniumGit2023
             try
             {
                 // Enter the following information into the sign up page an submit them
-                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "XxexampleX",
+                SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", 
                      "1234567", "1234567", "111-222-3456",
                      "", "New Brunswick", "E3A 0A1", "example");
 
@@ -914,7 +915,7 @@ namespace SeleniumGit2023
             {
                 // Enter the following information into the sign up page an submit them
                 SignUpPage(driver, true, "Goodname", "Goodname", "example@example.com", "!@#$%^&*()",
-                    "1234567", "", "111-222-3456",
+                    "1234567", "1234567", "111-222-3456",
                     "111 example St.", "New Brunswick", "E3A 0A1", "example");
 
                 string currentUrl = driver.Url;
@@ -990,10 +991,9 @@ namespace SeleniumGit2023
         }
 
         public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail, string strSname,
-           string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
+          string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
         {
-            //Assigns precise current time to variable, useful for creating unique usernames
-            string d = DateTime.Now.ToString();
+            
 
             // Get elements for the page
             driver.Url = "http://10.157.123.12/site4/signup.php";
@@ -1014,7 +1014,7 @@ namespace SeleniumGit2023
             txtFirstName.SendKeys(strFirstName);
             txtLastName.SendKeys(strLastName);
             txtEmail.SendKeys(strEmail);
-            txtSname.SendKeys(strSname + d);
+            txtSname.SendKeys(strSname);
             txtPassword.SendKeys(strPassword);
             txtCpassword.SendKeys(strCpassword);
             txtPnum.SendKeys(strPnum);
@@ -1030,9 +1030,10 @@ namespace SeleniumGit2023
         }
 
         public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail,
-          string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
+           string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
         {
-            
+            //Assigns precise current time to variable, useful for creating unique usernames
+            string strSname = DateTime.Now.ToString();
 
             // Get elements for the page
             driver.Url = "http://10.157.123.12/site4/signup.php";
@@ -1041,7 +1042,7 @@ namespace SeleniumGit2023
             IWebElement txtFirstName = SiteWebElement.txtFirstName(driver);
             IWebElement txtLastName = SiteWebElement.txtLastName(driver);
             IWebElement txtEmail = SiteWebElement.txtEmail(driver);
-          
+            IWebElement txtSname = SiteWebElement.txtSname(driver);
             IWebElement txtPassword = SiteWebElement.txtPassword(driver);
             IWebElement txtCpassword = SiteWebElement.txtCpassword(driver);
             IWebElement txtPnum = SiteWebElement.txtPnum(driver);
@@ -1053,7 +1054,7 @@ namespace SeleniumGit2023
             txtFirstName.SendKeys(strFirstName);
             txtLastName.SendKeys(strLastName);
             txtEmail.SendKeys(strEmail);
-         
+            txtSname.SendKeys(strSname);
             txtPassword.SendKeys(strPassword);
             txtCpassword.SendKeys(strCpassword);
             txtPnum.SendKeys(strPnum);
@@ -1065,6 +1066,51 @@ namespace SeleniumGit2023
             if (btnRegisterBool)
             {
                 btnRegister.Click();
+            }
+        }
+
+        public static void SignUpPage(IWebDriver driver, bool btnRegisterBool, string strFirstName, string strLastName, string strEmail, bool Sname,
+          string strPassword, string strCpassword, string strPnum, string strAddress, string strProv, string strPcode, string strDescript)
+        {
+
+            if (Sname == false)
+            {
+
+
+                // Get elements for the page
+                driver.Url = "http://10.157.123.12/site4/signup.php";
+
+                IWebElement btnRegister = SiteWebElement.btnRegister(driver);
+                IWebElement txtFirstName = SiteWebElement.txtFirstName(driver);
+                IWebElement txtLastName = SiteWebElement.txtLastName(driver);
+                IWebElement txtEmail = SiteWebElement.txtEmail(driver);
+                IWebElement txtPassword = SiteWebElement.txtPassword(driver);
+                IWebElement txtCpassword = SiteWebElement.txtCpassword(driver);
+                IWebElement txtPnum = SiteWebElement.txtPnum(driver);
+                IWebElement txtAddress = SiteWebElement.txtAddress(driver);
+                IWebElement Province = SiteWebElement.txtProvince(driver);
+                IWebElement txtPcode = SiteWebElement.txtPcode(driver);
+                IWebElement txtDescript = SiteWebElement.txtDescript(driver);
+
+                txtFirstName.SendKeys(strFirstName);
+                txtLastName.SendKeys(strLastName);
+                txtEmail.SendKeys(strEmail);
+                txtPassword.SendKeys(strPassword);
+                txtCpassword.SendKeys(strCpassword);
+                txtPnum.SendKeys(strPnum);
+                txtAddress.SendKeys(strAddress);
+                Province.SendKeys(strProv + Keys.Enter);
+                txtPcode.SendKeys(strPcode);
+                txtDescript.SendKeys(strDescript);
+
+                if (btnRegisterBool)
+                {
+                    btnRegister.Click();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Sname should be false, you might be using the wrong method. Check the driver Overrides.");
             }
         }
 
@@ -1092,7 +1138,7 @@ namespace SeleniumGit2023
         public static void indexPage(IWebDriver driver, bool btnSendBool, string myTweet)
         {
             //login
-            LoginPage(driver, false, false, "Test", "asdf", true);
+            LoginPage(driver, false, false, "Xxexamplex", "1234567", true);
 
            
             //Get Page Elements
